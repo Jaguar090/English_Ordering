@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Order - 英語並べ替えアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-container">
+
+    <div id="title-screen" class="screen">
+      <h1>English Order</h1>
+      
+      <div class="settings-panel">
+        <div class="setting-group">
+          <label><input type="radio" name="problem-type" value="standard" checked> 標準問題</label>
+          <label><input type="radio" name="problem-type" value="user"> ユーザー問題</label>
+        </div>
+
+        <div class="setting-group" id="file-select-group">
+          <select id="file-select">
+            <option value="">--問題を選択--</option>
+            <option value="lesson1">lesson1</option>
+          </select>
+          <input type="file" id="user-file-input" class="hidden" accept=".csv">
+        </div>
+
+        <div class="setting-group">
+          <select id="section-select">
+            <option value="">--セクションを選択--</option>
+            <option value="sec1">Section 1</option>
+          </select>
+        </div>
+
+        <div class="setting-group toggle-group">
+          <label>
+            <input type="checkbox" id="audio-toggle"> 
+            正解時に英語の音声を再生する
+          </label>
+        </div>
+      </div>
+
+      <button id="start-btn" class="primary-btn">スタート</button>
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+    <!-- <div id="game-screen" class="screen hidden"> -->
+      <div class="header-bar">
+        <div class="life-display">Life: ❤️❤️❤️</div>
+
+        <div id="message-display" class="message-text hidden"></div>
+
+        <div class="time-display">⏱ 15.0 s</div>
+      </div>
+
+      <div class="main-play-area">
+
+        <div class="japanese-text">
+          私は昨日、公園で友達とテニスをしました。
+        </div>
+
+        <div class="answer-area">
+          <div class="answer-box size-s">I</div>         <div class="answer-box size-m">played</div>    <div class="answer-box size-s">tennis</div>    
+          <div class="answer-box size-s">with</div>      
+          <div class="answer-box size-s">my</div>        
+          <div class="answer-box size-m">friends</div>   
+          <div class="answer-box size-s">in</div>        
+          <div class="answer-box size-s">the</div>       
+          <div class="answer-box size-s">park</div>      
+          <div class="answer-box size-l">yesterday.</div> </div>
+
+        <div class="word-buttons">
+          <button class="word-btn">in</button>
+          <button class="word-btn">friends</button>
+          <button class="word-btn">tennis</button>
+          <button class="word-btn">the</button>
+          <button class="word-btn">yesterday.</button>
+          <button class="word-btn">with</button>
+          <button class="word-btn">I</button>
+          <button class="word-btn error-shake">was</button> <button class="word-btn">played</button>
+          <button class="word-btn">park</button>
+          <button class="word-btn">my</button>
+          <button class="word-btn">at</button> </div>
+      </div>
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+      <h2 id="result-title">Result</h2> <div class="score-board">
+      <div class="score-board">
+        <p>Excellent : <span id="score-excellent">5</span></p>
+        <p>Good : <span id="score-good">2</span></p>
+        <p>Miss : <span id="score-miss">0</span></p>
+      </div>
+      <button id="back-title-btn" class="primary-btn">タイトルへ戻る</button>
+      <p class="hint-text">または Space キーで戻る</p>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
