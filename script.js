@@ -1,7 +1,7 @@
 // ==========================================
 // 初期設定・定数
 // ==========================================
-const DEFAULT_LIFE = 3;
+const DEFAULT_LIFE = 5;
 const TIME_PER_WORD = 5;
 const SPEECH_RATE = 0.8;
 
